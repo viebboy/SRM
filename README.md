@@ -1,4 +1,7 @@
-# Dependency
+# Knowledge Distillation by Sparse Representation Matching
+This repository provides the implementation of the paper "Knowledge Distillation By Sparse Representation Matching".
+
+## Dependency
 The code is written in python 3.x with the following packages:
 - mxnet 1.6.0 (required only for ImageNet experiments)
 - gluoncv 0.6.0 (required only for ImageNet experiments)
@@ -6,7 +9,7 @@ The code is written in python 3.x with the following packages:
 - torchvision 0.5.0
 - tqdm 4.43.0
 
-# Data
+## Data
 The data with its train/val/test split should be downloaded from [this](https://drive.google.com/file/d/1lg6VncaTMMqPHf4DOgW576gHGGLU8oO3/view?usp=sharing) and should be put under the main directory. The directory structure should be like this:
 
 ``` 
@@ -51,7 +54,7 @@ SRM/
     │   ...
 ```
 
-# Code organization & usage 
+## Code organization & usage 
 
 Source code for cifar100, transfer learning and imagenet experiments is in the respective directory. The code has been structured according to the following modular format:
 - Datasets.py handles the loading and preprocessing of data
@@ -93,7 +96,7 @@ STAGE = 'deploy'
 GPU_INDICES = [0, 1] # using 2 GPU with device ids 0 and 1
 ```
  
-# Pretrained ImageNet Models
+## Pretrained ImageNet Models
 We provide the pretrained ResNet18 model (top1 accuracy: **71.21**), which can be downloaded from [this](https://drive.google.com/file/d/1Dbj1AWzFeQGkFcdgSmClw3PkkSkhIXCu/view?usp=sharing). We also include a script (*eval.py*) that evaluates this pretrained model on the validation set of imagenet. In order to use this script, the pretrained model should be put under **SRM/data** directory:
 
 ```bash
